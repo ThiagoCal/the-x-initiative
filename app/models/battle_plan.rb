@@ -1,6 +1,6 @@
 class BattlePlan < ActiveRecord::Base
-  has_many :squads
-  has_many :emergencies
+  belongs_to :squad
+  belongs_to :emergency
 
   # TODO: Add some validation
   validates :name, presence: true, uniqueness: true
